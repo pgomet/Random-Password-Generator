@@ -11,7 +11,7 @@ numberOfCharacters = prompt("Please choose between 8 - 128 characters.");
   if (numberOfCharacters < 8 || numberOfCharacters > 128) {
     return ("Please pick a valid number of characters.");
   } 
-  // If a number < 8 or > 128, it must be inside the range of 8-128
+  // If a # is < 8 or > 128, user must pick a # in the range of 8-128 to continue
     else if (isNaN(numberOfCharacters)) {
     numberOfCharacters = prompt("Please enter a valid number.");
   }
@@ -19,6 +19,7 @@ numberOfCharacters = prompt("Please choose between 8 - 128 characters.");
       alert("Your password will be " + numberOfCharacters + " characters long.");
     }
 
+// All "contain-" codes below must contain an "if", if the user chooses "cancel", it must display a message
 containsLowercase = confirm("Do you want your password to contain lowercase characters?");
   if (containsLowercase) {
     var addLowercase = alert("Your password will contain lowercase characters.");
@@ -51,6 +52,12 @@ containsSpecialC = confirm("Do you want your password to contain special charact
         alert("Your password will NOT contain special characters.");
       }
 
+// If user does not select any of the above, display a message that they must choose one
+if (containsLowercase === false && containsUppercase === false && containsNumbers === false && containsSpecialC === false) {
+  return ("Please select at least one character type")
+  }
+
+  return newPassword;
 }
 
 
