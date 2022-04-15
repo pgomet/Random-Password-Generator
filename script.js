@@ -57,8 +57,26 @@ if (containsUppercase === false && containsLowercase === false && containsNumber
   return ("Please select at least one character type")
   }
 
-}
+  if (containsLowercase) {
+    possibleCharacters = possibleCharacters.concat(lowercaseCharacters);
+  }
+  if (containsUppercase) {
+    possibleCharacters = possibleCharacters.concat(uppercaseCharacters);
+  }
+  if (containsNumbers) {
+    possibleCharacters = possibleCharacters.concat(numberCharacters);
+  }
+  if (containsSpecialC) {
+    possibleCharacters = possibleCharacters.concat(specialCharacters);
+  }
 
+  let finalPassword = ""
+  for (let i = 0; i < numberOfCharacters; i++) {
+    let rng =[Math.floor(Math.random() * possibleCharacters.length)];
+    finalPassword = finalPassword + possibleCharacters[rng];
+    }
+    return finalPassword;
+  };
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
