@@ -70,12 +70,12 @@ if (containsUppercase === false && containsLowercase === false && containsNumber
     possibleCharacters = possibleCharacters.concat(specialCharacters);
   }
 
-  let finalPassword = ""
+  let newPassword = ""
   for (let i = 0; i < numberOfCharacters; i++) {
     let rng =[Math.floor(Math.random() * possibleCharacters.length)];
-    finalPassword = finalPassword + possibleCharacters[rng];
+    newPassword = newPassword + possibleCharacters[rng];
     }
-    return finalPassword;
+    return newPassword;
   };
 
 // Get references to the #generate element
