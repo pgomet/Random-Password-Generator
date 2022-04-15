@@ -10,7 +10,9 @@ function generatePassword() {
 numberOfCharacters = prompt("Please choose between 8 - 128 characters.");
   if (numberOfCharacters < 8 || numberOfCharacters > 128) {
     return ("Please pick a valid number of characters.");
-  } else if (isNaN(numberOfCharacters)) {
+  } 
+  // If a number < 8 or > 128, it must be inside the range of 8-128
+    else if (isNaN(numberOfCharacters)) {
     numberOfCharacters = prompt("Please enter a valid number.");
   }
     else {
@@ -41,7 +43,13 @@ containsNumbers = confirm("Do you want your password to contain numbers?");
       alert("Your password will NOT contain numbers.");
     }
 
-    
+containsSpecialC = confirm("Do you want your password to contain special characters?");
+    if (containsSpecialC) {
+      var addSpecialC = alert("Your password will contain special characters.");
+    }
+      else {
+        alert("Your password will NOT contain special characters.");
+      }
 
 }
 
