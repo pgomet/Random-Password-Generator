@@ -57,19 +57,6 @@ if (containsUppercase === false && containsLowercase === false && containsNumber
   return ("Please select at least one character type")
   }
 
-  if (containsLowercase) {
-    possibleCharacters = possibleCharacters.concat(lowercaseCharacters);
-  }
-  if (containsUppercase) {
-    possibleCharacters = possibleCharacters.concat(uppercaseCharacters);
-  }
-  if (containsNumbers) {
-    possibleCharacters = possibleCharacters.concat(numberCharacters);
-  }
-  if (containsSpecialC) {
-    possibleCharacters = possibleCharacters.concat(specialCharacters);
-  }
-
   let newPassword = ""
   for (let i = 0; i < numberOfCharacters; i++) {
     let rng =[Math.floor(Math.random() * possibleCharacters.length)];
