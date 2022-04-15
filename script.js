@@ -20,20 +20,20 @@ numberOfCharacters = prompt("Please choose between 8 - 128 characters.");
     }
 
 // All "contain-" codes below must contain an "if", if the user chooses "cancel", it must display a message
-containsLowercase = confirm("Do you want your password to contain lowercase characters?");
-  if (containsLowercase) {
-    var addLowercase = alert("Your password will contain lowercase characters.");
-  }
-    else {
-      alert("Your password will NOT contain lowercase characters.");
-    }
-
 containsUppercase = confirm("Do you want your password to contain uppercase characters?");
   if (containsUppercase) {
     var addUppercase = alert("Your password will contain uppercase characters.");
   }
     else {
       alert("Your password will NOT contain uppercase characters.");
+    }
+
+containsLowercase = confirm("Do you want your password to contain lowercase characters?");
+  if (containsLowercase) {
+    var addLowercase = alert("Your password will contain lowercase characters.");
+  }
+    else {
+      alert("Your password will NOT contain lowercase characters.");
     }
 
 containsNumbers = confirm("Do you want your password to contain numbers?");
@@ -53,7 +53,7 @@ containsSpecialC = confirm("Do you want your password to contain special charact
       }
 
 // If user does not select any of the above, display a message that they must choose one
-if (containsLowercase === false && containsUppercase === false && containsNumbers === false && containsSpecialC === false) {
+if (containsUppercase === false && containsLowercase === false && containsNumbers === false && containsSpecialC === false) {
   return ("Please select at least one character type")
   }
 
