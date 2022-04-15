@@ -19,14 +19,31 @@ numberOfCharacters = prompt("Please choose between 8 - 128 characters.");
 
 containsLowercase = confirm("Do you want your password to contain lowercase characters?");
   if (containsLowercase) {
-    var turnToLowercase = alert("Your password will contain lowercase characters.");
+    var addLowercase = alert("Your password will contain lowercase characters.");
   }
     else {
       alert("Your password will NOT contain lowercase characters.");
     }
 
-}
+containsUppercase = confirm("Do you want your password to contain uppercase characters?");
+  if (containsUppercase) {
+    var addUppercase = alert("Your password will contain uppercase characters.");
+  }
+    else {
+      alert("Your password will NOT contain uppercase characters.");
+    }
 
+containsNumbers = confirm("Do you want your password to contain numbers?");
+  if (containsNumbers) {
+    var addNumbers = alert("Your password will contain numbers.");
+  }
+    else {
+      alert("Your password will NOT contain numbers.");
+    }
+
+    
+
+}
 
 
 // Get references to the #generate element
