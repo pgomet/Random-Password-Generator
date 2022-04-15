@@ -57,7 +57,6 @@ if (containsLowercase === false && containsUppercase === false && containsNumber
   return ("Please select at least one character type")
   }
 
-  return newPassword;
 }
 
 
